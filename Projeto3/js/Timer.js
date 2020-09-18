@@ -20,7 +20,7 @@
                     seg=seg%60;
                     
                     
-                    if(min==5){
+                    if(seg==10){
                         document.getElementById('teste').innerHTML=min+'m '+seg+'s';
 
                         clearInterval(x);
