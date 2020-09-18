@@ -1,7 +1,6 @@
-    var audio = new Audio("alarm.mp3")
-    var x;
-    var min = 00;
-    var seg = 00;
+ var x;
+    var min = 0;
+    var seg = 0;
     var countClick = 0;
     var countClickStop=0;
         function start(){
@@ -14,20 +13,16 @@
 
                 x = setInterval(function(){
                     
-                    document.getElementById('teste').innerHTML=("00"+min).slice(-2)+":"+("00"+seg).slice(-2);
+                    document.getElementById('teste').innerHTML=min+'m '+seg+'s';
                     seg+=1;
                     min +=Math.floor(seg/60);
 
                     seg=seg%60;
                     
                     
-                    if(min==1){
-                        
-                        
-                        document.getElementById('teste').innerHTML=("00"+min).slice(-2)+":"+("00"+seg-1).slice(-2);
-                        document.getElementById('start').innerHTML="Start";                      
+                    if(min==5){
+                        document.getElementById('teste').innerHTML=min+'m '+seg+'s';
 
-                        
                         clearInterval(x);
                     }
                 },1000); 
@@ -43,7 +38,8 @@
                 min=0;
                 seg=0;
                 
-                document.getElementById('teste').innerHTML=("00"+min).slice(-2)+":"+("00"+seg).slice(-2);
+                document.getElementById('teste').innerHTML=min+'m '+seg+'s';
+
                 clearInterval(x);
 
             }
