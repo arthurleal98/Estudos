@@ -1,0 +1,75 @@
+@font-face{
+    font-family: bubble;
+    src: url("https://arthurleal98.io/Estudos-Web/Projeto1/css/Bubblegum.ttf");
+}
+
+#video{
+    width: auto;
+}
+svg{
+    min-width: 2em;
+    min-height: 2em;
+}
+#header{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+}
+#header-img{
+    min-width: 100px;
+    max-width: 160px;
+}
+
+#video{
+    width: 70vh;
+    height: 39vh;
+}
+
+p.col-6.my-2{
+    text-align: left;
+}
+.a-bar{
+    font-family:bubble;
+    font-size: 23px;
+}
+#email{
+    align-self: center;
+
+    width: 100%;
+    max-width: 300px;
+}
+#submit{
+    align-self: center;
+
+    width: 100%;
+    max-width: 150px;
+}
+.bar-black{
+    background-color: black;
+    
+    
+}
+
+@media(max-width:770px){
+    div.bar-black{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #video{
+        width: auto;
+        height: auto;
+    }
+    #header-img{
+        display: block;
+        
+        margin-left: 48px;
+        
+    }
+    #nav-bar{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
